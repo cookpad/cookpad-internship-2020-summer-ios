@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BA13831D74BFE145A65A222 /* Pods_MiniCookpad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B51621DCFBCDD7A5895BA2 /* Pods_MiniCookpad.framework */; };
+		322BECF824CE712100F6A201 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BECF724CE712100F6A201 /* AppDelegate.swift */; };
+		322BECFA24CE712100F6A201 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BECF924CE712100F6A201 /* SceneDelegate.swift */; };
+		322BECFC24CE712100F6A201 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BECFB24CE712100F6A201 /* RecipeListViewController.swift */; };
+		322BED0124CE712600F6A201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 322BED0024CE712600F6A201 /* Assets.xcassets */; };
+		322BED0424CE712600F6A201 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 322BED0224CE712600F6A201 /* LaunchScreen.storyboard */; };
+		322BED0F24CE712700F6A201 /* MiniCookpadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BED0E24CE712700F6A201 /* MiniCookpadTests.swift */; };
+		322BED1F24CE788400F6A201 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BED1E24CE788400F6A201 /* RecipeTableViewCell.swift */; };
+		322BED2124CE798D00F6A201 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 322BED2024CE798D00F6A201 /* GoogleService-Info.plist */; };
+		322BED2424CE7ED700F6A201 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BED2324CE7ED700F6A201 /* DummyData.swift */; };
+		322BED3B24CFC3B700F6A201 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BED3A24CFC3B700F6A201 /* RecipeDetailsViewController.swift */; };
+		322BED4924CFFAC700F6A201 /* RecipeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BED4824CFFAC700F6A201 /* RecipeEditorViewController.swift */; };
+		A665071A5C03DD076A859C89 /* Pods_MiniCookpadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D6198D26C4CA301B60B869 /* Pods_MiniCookpadTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		322BED0B24CE712700F6A201 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 322BECEC24CE712100F6A201 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 322BECF324CE712100F6A201;
+			remoteInfo = MiniCookpad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		322BECF424CE712100F6A201 /* MiniCookpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniCookpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		322BECF724CE712100F6A201 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		322BECF924CE712100F6A201 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		322BECFB24CE712100F6A201 /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
+		322BED0024CE712600F6A201 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		322BED0324CE712600F6A201 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		322BED0524CE712600F6A201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		322BED0A24CE712700F6A201 /* MiniCookpadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniCookpadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		322BED0E24CE712700F6A201 /* MiniCookpadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCookpadTests.swift; sourceTree = "<group>"; };
+		322BED1024CE712700F6A201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		322BED1E24CE788400F6A201 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		322BED2024CE798D00F6A201 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		322BED2324CE7ED700F6A201 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
+		322BED3A24CFC3B700F6A201 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		322BED4824CFFAC700F6A201 /* RecipeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorViewController.swift; sourceTree = "<group>"; };
+		55B51621DCFBCDD7A5895BA2 /* Pods_MiniCookpad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniCookpad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC4AA5B581FAD60590BC0C1 /* Pods-MiniCookpadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniCookpadTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniCookpadTests/Pods-MiniCookpadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8D6198D26C4CA301B60B869 /* Pods_MiniCookpadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniCookpadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14337BC415AB0DED05D20CA /* Pods-MiniCookpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniCookpad.release.xcconfig"; path = "Target Support Files/Pods-MiniCookpad/Pods-MiniCookpad.release.xcconfig"; sourceTree = "<group>"; };
+		D85D318655A4B90127E088F6 /* Pods-MiniCookpadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniCookpadTests.release.xcconfig"; path = "Target Support Files/Pods-MiniCookpadTests/Pods-MiniCookpadTests.release.xcconfig"; sourceTree = "<group>"; };
+		E1D8ECE7BFC64B539734D849 /* Pods-MiniCookpad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniCookpad.debug.xcconfig"; path = "Target Support Files/Pods-MiniCookpad/Pods-MiniCookpad.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		322BECF124CE712100F6A201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BA13831D74BFE145A65A222 /* Pods_MiniCookpad.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		322BED0724CE712700F6A201 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A665071A5C03DD076A859C89 /* Pods_MiniCookpadTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		322BECEB24CE712100F6A201 = {
+			isa = PBXGroup;
+			children = (
+				322BECF624CE712100F6A201 /* MiniCookpad */,
+				322BED0D24CE712700F6A201 /* MiniCookpadTests */,
+				322BECF524CE712100F6A201 /* Products */,
+				36E7E6B96C2A4DB8235EDED1 /* Pods */,
+				A11F2EF71162D3807245F2BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		322BECF524CE712100F6A201 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				322BECF424CE712100F6A201 /* MiniCookpad.app */,
+				322BED0A24CE712700F6A201 /* MiniCookpadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		322BECF624CE712100F6A201 /* MiniCookpad */ = {
+			isa = PBXGroup;
+			children = (
+				32C84BD824D3F2D700E684CF /* Data */,
+				322BED1924CE713C00F6A201 /* Application */,
+				322BECF724CE712100F6A201 /* AppDelegate.swift */,
+				322BECF924CE712100F6A201 /* SceneDelegate.swift */,
+				322BED2024CE798D00F6A201 /* GoogleService-Info.plist */,
+				322BED0024CE712600F6A201 /* Assets.xcassets */,
+				322BED0224CE712600F6A201 /* LaunchScreen.storyboard */,
+				322BED0524CE712600F6A201 /* Info.plist */,
+				322BED1D24CE758200F6A201 /* RecipeList */,
+				322BED3924CFC3A300F6A201 /* RecipeDetails */,
+				322BED4724CFFAB500F6A201 /* RecipeEditor */,
+				322BED2324CE7ED700F6A201 /* DummyData.swift */,
+			);
+			path = MiniCookpad;
+			sourceTree = "<group>";
+		};
+		322BED0D24CE712700F6A201 /* MiniCookpadTests */ = {
+			isa = PBXGroup;
+			children = (
+				322BED0E24CE712700F6A201 /* MiniCookpadTests.swift */,
+				322BED1024CE712700F6A201 /* Info.plist */,
+			);
+			path = MiniCookpadTests;
+			sourceTree = "<group>";
+		};
+		322BED1924CE713C00F6A201 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		322BED1D24CE758200F6A201 /* RecipeList */ = {
+			isa = PBXGroup;
+			children = (
+				322BECFB24CE712100F6A201 /* RecipeListViewController.swift */,
+				322BED1E24CE788400F6A201 /* RecipeTableViewCell.swift */,
+			);
+			path = RecipeList;
+			sourceTree = "<group>";
+		};
+		322BED3924CFC3A300F6A201 /* RecipeDetails */ = {
+			isa = PBXGroup;
+			children = (
+				322BED3A24CFC3B700F6A201 /* RecipeDetailsViewController.swift */,
+			);
+			path = RecipeDetails;
+			sourceTree = "<group>";
+		};
+		322BED4724CFFAB500F6A201 /* RecipeEditor */ = {
+			isa = PBXGroup;
+			children = (
+				322BED4824CFFAC700F6A201 /* RecipeEditorViewController.swift */,
+			);
+			path = RecipeEditor;
+			sourceTree = "<group>";
+		};
+		32C84BD824D3F2D700E684CF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				32C84BDA24D3F2E300E684CF /* Entity */,
+				32C84BD924D3F2DC00E684CF /* DataStore */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		32C84BD924D3F2DC00E684CF /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		32C84BDA24D3F2E300E684CF /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		36E7E6B96C2A4DB8235EDED1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8ECE7BFC64B539734D849 /* Pods-MiniCookpad.debug.xcconfig */,
+				D14337BC415AB0DED05D20CA /* Pods-MiniCookpad.release.xcconfig */,
+				ABC4AA5B581FAD60590BC0C1 /* Pods-MiniCookpadTests.debug.xcconfig */,
+				D85D318655A4B90127E088F6 /* Pods-MiniCookpadTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A11F2EF71162D3807245F2BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55B51621DCFBCDD7A5895BA2 /* Pods_MiniCookpad.framework */,
+				B8D6198D26C4CA301B60B869 /* Pods_MiniCookpadTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		322BECF324CE712100F6A201 /* MiniCookpad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 322BED1324CE712700F6A201 /* Build configuration list for PBXNativeTarget "MiniCookpad" */;
+			buildPhases = (
+				97300820B47495E822432987 /* [CP] Check Pods Manifest.lock */,
+				322BECF024CE712100F6A201 /* Sources */,
+				322BECF124CE712100F6A201 /* Frameworks */,
+				322BECF224CE712100F6A201 /* Resources */,
+				EA477DD891B80D03D9C43D41 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiniCookpad;
+			productName = MiniCookpad;
+			productReference = 322BECF424CE712100F6A201 /* MiniCookpad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		322BED0924CE712700F6A201 /* MiniCookpadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 322BED1624CE712700F6A201 /* Build configuration list for PBXNativeTarget "MiniCookpadTests" */;
+			buildPhases = (
+				18ADAF7C4DADF3953817D0D9 /* [CP] Check Pods Manifest.lock */,
+				322BED0624CE712700F6A201 /* Sources */,
+				322BED0724CE712700F6A201 /* Frameworks */,
+				322BED0824CE712700F6A201 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				322BED0C24CE712700F6A201 /* PBXTargetDependency */,
+			);
+			name = MiniCookpadTests;
+			productName = MiniCookpadTests;
+			productReference = 322BED0A24CE712700F6A201 /* MiniCookpadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		322BECEC24CE712100F6A201 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "kensuke-hoshikawa";
+				TargetAttributes = {
+					322BECF324CE712100F6A201 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					322BED0924CE712700F6A201 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 322BECF324CE712100F6A201;
+					};
+				};
+			};
+			buildConfigurationList = 322BECEF24CE712100F6A201 /* Build configuration list for PBXProject "MiniCookpad" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 322BECEB24CE712100F6A201;
+			productRefGroup = 322BECF524CE712100F6A201 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				322BECF324CE712100F6A201 /* MiniCookpad */,
+				322BED0924CE712700F6A201 /* MiniCookpadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		322BECF224CE712100F6A201 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				322BED0424CE712600F6A201 /* LaunchScreen.storyboard in Resources */,
+				322BED2124CE798D00F6A201 /* GoogleService-Info.plist in Resources */,
+				322BED0124CE712600F6A201 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		322BED0824CE712700F6A201 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18ADAF7C4DADF3953817D0D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniCookpadTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97300820B47495E822432987 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MiniCookpad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA477DD891B80D03D9C43D41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniCookpad/Pods-MiniCookpad-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MiniCookpad/Pods-MiniCookpad-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MiniCookpad/Pods-MiniCookpad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		322BECF024CE712100F6A201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				322BECFC24CE712100F6A201 /* RecipeListViewController.swift in Sources */,
+				322BED3B24CFC3B700F6A201 /* RecipeDetailsViewController.swift in Sources */,
+				322BED1F24CE788400F6A201 /* RecipeTableViewCell.swift in Sources */,
+				322BECF824CE712100F6A201 /* AppDelegate.swift in Sources */,
+				322BECFA24CE712100F6A201 /* SceneDelegate.swift in Sources */,
+				322BED2424CE7ED700F6A201 /* DummyData.swift in Sources */,
+				322BED4924CFFAC700F6A201 /* RecipeEditorViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		322BED0624CE712700F6A201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				322BED0F24CE712700F6A201 /* MiniCookpadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		322BED0C24CE712700F6A201 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 322BECF324CE712100F6A201 /* MiniCookpad */;
+			targetProxy = 322BED0B24CE712700F6A201 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		322BED0224CE712600F6A201 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				322BED0324CE712600F6A201 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		322BED1124CE712700F6A201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		322BED1224CE712700F6A201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		322BED1424CE712700F6A201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1D8ECE7BFC64B539734D849 /* Pods-MiniCookpad.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NG7BR536A;
+				INFOPLIST_FILE = MiniCookpad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cookpad.MiniCookpad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		322BED1524CE712700F6A201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D14337BC415AB0DED05D20CA /* Pods-MiniCookpad.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NG7BR536A;
+				INFOPLIST_FILE = MiniCookpad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cookpad.MiniCookpad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		322BED1724CE712700F6A201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABC4AA5B581FAD60590BC0C1 /* Pods-MiniCookpadTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NG7BR536A;
+				INFOPLIST_FILE = MiniCookpadTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cookpad.MiniCookpadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniCookpad.app/MiniCookpad";
+			};
+			name = Debug;
+		};
+		322BED1824CE712700F6A201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D85D318655A4B90127E088F6 /* Pods-MiniCookpadTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NG7BR536A;
+				INFOPLIST_FILE = MiniCookpadTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cookpad.MiniCookpadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniCookpad.app/MiniCookpad";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		322BECEF24CE712100F6A201 /* Build configuration list for PBXProject "MiniCookpad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				322BED1124CE712700F6A201 /* Debug */,
+				322BED1224CE712700F6A201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		322BED1324CE712700F6A201 /* Build configuration list for PBXNativeTarget "MiniCookpad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				322BED1424CE712700F6A201 /* Debug */,
+				322BED1524CE712700F6A201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		322BED1624CE712700F6A201 /* Build configuration list for PBXNativeTarget "MiniCookpadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				322BED1724CE712700F6A201 /* Debug */,
+				322BED1824CE712700F6A201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 322BECEC24CE712100F6A201 /* Project object */;
+}
