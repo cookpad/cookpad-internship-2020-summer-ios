@@ -1,9 +1,14 @@
 import Foundation
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, SignUpViewProtocol {
     private let emailTextFeild = UITextField()
     private let passwordTextFeild = UITextField()
+    private var presenter: SignUpPresenterProtocol!
+
+    func inject(presenter: SignUpPresenterProtocol) {
+        self.presenter = presenter
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,14 +76,53 @@ class SignUpViewController: UIViewController {
     }
 
     @objc private func didTapSignUp() {
-        // TODO: ユーザ作成
+        presenter.createUser(email: emailTextFeild.text, password: passwordTextFeild.text)
     }
 
     @objc private func tapClose() {
         close()
     }
 
+    func signUpComplete() {
+        let alertController = UIAlertController(title: "会員登録完了", message: "会員登録が完了しました。", preferredStyle: .alert)
+        let closeAction = UIAlertAction(title: "閉じる", style: .default) { [weak self] _ in
+            self?.close()
+        }
+        alertController.addAction(closeAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
     private func close() {
         dismiss(animated: true, completion: nil)
+    }
+
+    func showError(signUpError: SignUpError) {
+        let message: String
+        switch signUpError {
+        case .validationError:
+            message = "入力されていない項目があります"
+        case .emailAlreadyInUse:
+            message = "このメールアドレスは既に使用されています"
+        case .invalidEmail:
+            message = "メールアドレスの形式が正しくありません"
+        case .weakPassword:
+            message = "パスワードの文字数を増やしてください"
+        case .unknown:
+            message = "不明なエラーが発生しました。再度お試しください"
+        }
+
+        let alertController = UIAlertController(title: "エラー", message: message, preferredStyle: .alert)
+        let closeAction = UIAlertAction(title: "閉じる", style: .default)
+        alertController.addAction(closeAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
+    func showComplete() {
+        let alertController = UIAlertController(title: "登録完了", message: "会員登録が完了しました。", preferredStyle: .alert)
+        let closeAction = UIAlertAction(title: "閉じる", style: .default) { [weak self] _ in
+            self?.close()
+        }
+        alertController.addAction(closeAction)
+        present(alertController, animated: true, completion: nil)
     }
 }

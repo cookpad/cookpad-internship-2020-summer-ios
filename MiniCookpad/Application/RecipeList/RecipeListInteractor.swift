@@ -1,7 +1,9 @@
 class RecipeListInteractor: RecipeListInteractorProtocol {
     private let recipeDataStore: RecipeDataStoreProtocol
-    init(recipeDataStore: RecipeDataStoreProtocol) {
+    private let userDataStore: UserDataStoreProtocol
+    init(recipeDataStore: RecipeDataStoreProtocol, userDataStore: UserDataStoreProtocol) {
         self.recipeDataStore = recipeDataStore
+        self.userDataStore = userDataStore
     }
     
     func fetchAllRecipes(completion: @escaping ((Result<[RecipeListRecipe], Error>) -> Void)) {
@@ -20,5 +22,9 @@ class RecipeListInteractor: RecipeListInteractorProtocol {
                 completion(.failure(error))
             }
         }
+    }
+
+    func hasUserID() -> Bool {
+        return userDataStore.currentUserID != nil
     }
 }

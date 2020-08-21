@@ -17,4 +17,11 @@ class RecipeListWireframe: RecipeListWireframeProtocol {
         nav.modalPresentationStyle = .fullScreen
         viewController.present(nav, animated: true, completion: nil)
     }
+
+    func openSignUp() {
+        let vc = SignUpViewBuilder.build()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        viewController.present(nav, animated: true, completion: nil)
+    }
 }

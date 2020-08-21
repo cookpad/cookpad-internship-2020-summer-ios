@@ -44,6 +44,14 @@
 		3244361624EFDD6900BD68BC /* RecipeEditorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244361524EFDD6900BD68BC /* RecipeEditorPresenter.swift */; };
 		3244361824EFDDDA00BD68BC /* RecipeEditorWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244361724EFDDDA00BD68BC /* RecipeEditorWireframe.swift */; };
 		3244361A24EFDFDB00BD68BC /* RecipeEditorINteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244361924EFDFDB00BD68BC /* RecipeEditorINteractorTests.swift */; };
+		3244361C24EFE28300BD68BC /* SignUpContract.swift .swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244361B24EFE28300BD68BC /* SignUpContract.swift .swift */; };
+		3244361E24EFE29200BD68BC /* SignUpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244361D24EFE29200BD68BC /* SignUpError.swift */; };
+		3244362024EFE29E00BD68BC /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244361F24EFE29E00BD68BC /* SignUpInteractor.swift */; };
+		3244362224EFE2AE00BD68BC /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244362124EFE2AE00BD68BC /* SignUpPresenter.swift */; };
+		3244362424EFE2BB00BD68BC /* SignUpViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244362324EFE2BB00BD68BC /* SignUpViewBuilder.swift */; };
+		3244362624EFE2FD00BD68BC /* SignUpWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244362524EFE2FD00BD68BC /* SignUpWireframe.swift */; };
+		3244362824EFE31000BD68BC /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244362724EFE31000BD68BC /* AuthError.swift */; };
+		3244362B24EFE32400BD68BC /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244362A24EFE32400BD68BC /* UserDataStore.swift */; };
 		A665071A5C03DD076A859C89 /* Pods_MiniCookpadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D6198D26C4CA301B60B869 /* Pods_MiniCookpadTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +106,14 @@
 		3244361524EFDD6900BD68BC /* RecipeEditorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorPresenter.swift; sourceTree = "<group>"; };
 		3244361724EFDDDA00BD68BC /* RecipeEditorWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorWireframe.swift; sourceTree = "<group>"; };
 		3244361924EFDFDB00BD68BC /* RecipeEditorINteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorINteractorTests.swift; sourceTree = "<group>"; };
+		3244361B24EFE28300BD68BC /* SignUpContract.swift .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpContract.swift .swift"; sourceTree = "<group>"; };
+		3244361D24EFE29200BD68BC /* SignUpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpError.swift; sourceTree = "<group>"; };
+		3244361F24EFE29E00BD68BC /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		3244362124EFE2AE00BD68BC /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		3244362324EFE2BB00BD68BC /* SignUpViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewBuilder.swift; sourceTree = "<group>"; };
+		3244362524EFE2FD00BD68BC /* SignUpWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWireframe.swift; sourceTree = "<group>"; };
+		3244362724EFE31000BD68BC /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		3244362A24EFE32400BD68BC /* UserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
 		55B51621DCFBCDD7A5895BA2 /* Pods_MiniCookpad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniCookpad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC4AA5B581FAD60590BC0C1 /* Pods-MiniCookpadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniCookpadTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniCookpadTests/Pods-MiniCookpadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8D6198D26C4CA301B60B869 /* Pods_MiniCookpadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniCookpadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -231,6 +247,13 @@
 			isa = PBXGroup;
 			children = (
 				324435EF24E4D52600BD68BC /* SignUpViewController.swift */,
+				3244361B24EFE28300BD68BC /* SignUpContract.swift .swift */,
+				3244361D24EFE29200BD68BC /* SignUpError.swift */,
+				3244361F24EFE29E00BD68BC /* SignUpInteractor.swift */,
+				3244362124EFE2AE00BD68BC /* SignUpPresenter.swift */,
+				3244362324EFE2BB00BD68BC /* SignUpViewBuilder.swift */,
+				3244362524EFE2FD00BD68BC /* SignUpWireframe.swift */,
+				3244362724EFE31000BD68BC /* AuthError.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -253,6 +276,14 @@
 			path = ImageDataStore;
 			sourceTree = "<group>";
 		};
+		3244362924EFE31A00BD68BC /* UserDataStore */ = {
+			isa = PBXGroup;
+			children = (
+				3244362A24EFE32400BD68BC /* UserDataStore.swift */,
+			);
+			path = UserDataStore;
+			sourceTree = "<group>";
+		};
 		32C84BD824D3F2D700E684CF /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +295,7 @@
 		32C84BD924D3F2DC00E684CF /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				3244362924EFE31A00BD68BC /* UserDataStore */,
 				3244360824EFC8FF00BD68BC /* ImageDataStore */,
 				324435FA24EE503100BD68BC /* RecipeDataStore */,
 			);
@@ -470,24 +502,32 @@
 				3244361224EFDD4900BD68BC /* RecipeEditorViewBuilder.swift in Sources */,
 				324435B224E23E0A00BD68BC /* RecipeListViewBuilder.swift in Sources */,
 				324435B024E23DFE00BD68BC /* RecipeListContract.swift in Sources */,
+				3244361E24EFE29200BD68BC /* SignUpError.swift in Sources */,
 				322BECF824CE712100F6A201 /* AppDelegate.swift in Sources */,
 				3244361024EFC9B800BD68BC /* RecipeEditorContract.swift in Sources */,
 				324435B824E23E2D00BD68BC /* RecipeListRecipe.swift in Sources */,
 				324435AE24E23DF200BD68BC /* RecipeListPresenter.swift in Sources */,
 				322BECFA24CE712100F6A201 /* SceneDelegate.swift in Sources */,
+				3244362224EFE2AE00BD68BC /* SignUpPresenter.swift in Sources */,
 				324435BC24E2410500BD68BC /* RecipeDetailsContract.swift in Sources */,
+				3244362024EFE29E00BD68BC /* SignUpInteractor.swift in Sources */,
+				3244361C24EFE28300BD68BC /* SignUpContract.swift .swift in Sources */,
 				3244360E24EFC9A100BD68BC /* RecipeEditorError.swift in Sources */,
 				324435BA24E240F400BD68BC /* RecipeDetailsPresenter.swift in Sources */,
+				3244362624EFE2FD00BD68BC /* SignUpWireframe.swift in Sources */,
 				3244360A24EFC91400BD68BC /* ImageDataStore.swift in Sources */,
 				324435C024E2412300BD68BC /* RecipeDetailsInteractor.swift in Sources */,
 				324435BE24E2410F00BD68BC /* RecipeDetailsViewBuilder.swift in Sources */,
 				3244360C24EFC92200BD68BC /* ImagePath.swift in Sources */,
+				3244362824EFE31000BD68BC /* AuthError.swift in Sources */,
 				322BED2424CE7ED700F6A201 /* DummyData.swift in Sources */,
 				322BED4924CFFAC700F6A201 /* RecipeEditorViewController.swift in Sources */,
 				324435C224E2412C00BD68BC /* RecipeDetailsWireframe.swift in Sources */,
 				3244361824EFDDDA00BD68BC /* RecipeEditorWireframe.swift in Sources */,
 				324435C424E2413900BD68BC /* RecipeDetailsRecipe.swift in Sources */,
 				324435F924EE502E00BD68BC /* FirestoreRecipe.swift in Sources */,
+				3244362B24EFE32400BD68BC /* UserDataStore.swift in Sources */,
+				3244362424EFE2BB00BD68BC /* SignUpViewBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
