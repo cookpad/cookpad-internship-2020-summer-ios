@@ -2,11 +2,16 @@ import Foundation
 import UIKit
 import Photos
 
-class RecipeEditorViewController: UIViewController {
+class RecipeEditorViewController: UIViewController, RecipeEditorViewProtocol {
     private let recipeImageView = UIImageView()
     private let titleFieldView = UITextField()
     private let stepsView = StepsView()
     private var postImage: UIImage?
+    private var presenter: RecipeEditorPresenterProtocol!
+
+    func inject(presenter: RecipeEditorPresenterProtocol) {
+        self.presenter = presenter
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,10 +87,11 @@ class RecipeEditorViewController: UIViewController {
     }
 
     @objc private func tapPost() {
-//        let title = titleFieldView.text
-//        let steps = stepsView.getSteps()
-//        let image = postImage
-        // TODO: レシピ作成
+        let title = titleFieldView.text
+        let steps = stepsView.getSteps()
+        let image = postImage
+
+        presenter.createRecipe(title: title, steps: steps, image: image)
     }
 
     @objc private func tapClose() {
@@ -113,7 +119,7 @@ class RecipeEditorViewController: UIViewController {
     func showComplete() {
         let alertController = UIAlertController(title: "投稿完了", message: "レシピ投稿が完了しました。", preferredStyle: .alert)
         let closeAction = UIAlertAction(title: "閉じる", style: .default) { [weak self] _ in
-            self?.close()
+            self?.presenter.close()
         }
         alertController.addAction(closeAction)
         present(alertController, animated: true, completion: nil)

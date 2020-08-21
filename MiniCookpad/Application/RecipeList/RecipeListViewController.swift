@@ -9,16 +9,19 @@ class RecipeListViewController: UIViewController, RecipeListViewProtocol {
     private let refreshControl = UIRefreshControl()
     private let recipeCollection = Firestore.firestore().collection("recipes")
     private var presenter: RecipeListPresenterProtocol!
-
+    
     func inject(presenter: RecipeListPresenterProtocol) {
         self.presenter = presenter
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpDummyDataButton()
-
+        
+        let postButton = UIBarButtonItem(title: "レシピ投稿する", style: .plain, target: self, action: #selector(didTapPostRecipe))
+        navigationItem.rightBarButtonItem = postButton
+        
         title = "レシピ一覧"
         
         view = tableView
@@ -30,7 +33,7 @@ class RecipeListViewController: UIViewController, RecipeListViewProtocol {
         
         refresh()
     }
-
+    
     func showRecipes(_ recipes: [RecipeListRecipe]) {
         self.recipes = recipes
         refreshControl.endRefreshing()
@@ -49,6 +52,10 @@ class RecipeListViewController: UIViewController, RecipeListViewProtocol {
         refreshControl.beginRefreshing()
         
         presenter.refresh()
+    }
+    
+    @objc private func didTapPostRecipe() {
+        presenter.openRecipeEditor()
     }
 }
 
