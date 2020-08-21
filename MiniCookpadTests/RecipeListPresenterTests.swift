@@ -21,6 +21,7 @@ class MockRecipeListInteractor: RecipeListInteractorProtocol {
 
 class MockRecipeListWireframe: RecipeListWireframeProtocol {
     func openRecipeDetails(recipeID: String) { }
+    func openRecipeEditor() { }
 }
 
 class RecipeListPresenterTests: XCTestCase {
