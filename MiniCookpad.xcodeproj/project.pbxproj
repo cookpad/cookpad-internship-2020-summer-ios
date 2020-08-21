@@ -34,6 +34,7 @@
 		324435C424E2413900BD68BC /* RecipeDetailsRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435C324E2413900BD68BC /* RecipeDetailsRecipe.swift */; };
 		324435F024E4D52600BD68BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435EF24E4D52600BD68BC /* SignUpViewController.swift */; };
 		324435F924EE502E00BD68BC /* FirestoreRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435F824EE502E00BD68BC /* FirestoreRecipe.swift */; };
+		3244360724EFC37E00BD68BC /* RecipeListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3244360624EFC37E00BD68BC /* RecipeListPresenterTests.swift */; };
 		A665071A5C03DD076A859C89 /* Pods_MiniCookpadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D6198D26C4CA301B60B869 /* Pods_MiniCookpadTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		324435C324E2413900BD68BC /* RecipeDetailsRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsRecipe.swift; sourceTree = "<group>"; };
 		324435EF24E4D52600BD68BC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		324435F824EE502E00BD68BC /* FirestoreRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRecipe.swift; sourceTree = "<group>"; };
+		3244360624EFC37E00BD68BC /* RecipeListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListPresenterTests.swift; sourceTree = "<group>"; };
 		55B51621DCFBCDD7A5895BA2 /* Pods_MiniCookpad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniCookpad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC4AA5B581FAD60590BC0C1 /* Pods-MiniCookpadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniCookpadTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniCookpadTests/Pods-MiniCookpadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8D6198D26C4CA301B60B869 /* Pods_MiniCookpadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniCookpadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,7 @@
 			children = (
 				322BED0E24CE712700F6A201 /* MiniCookpadTests.swift */,
 				322BED1024CE712700F6A201 /* Info.plist */,
+				3244360624EFC37E00BD68BC /* RecipeListPresenterTests.swift */,
 			);
 			path = MiniCookpadTests;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3244360724EFC37E00BD68BC /* RecipeListPresenterTests.swift in Sources */,
 				322BED0F24CE712700F6A201 /* MiniCookpadTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
