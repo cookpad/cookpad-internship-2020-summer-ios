@@ -4,27 +4,22 @@ import FirebaseStorage
 import FirebaseUI
 import Firebase
 
-final class RecipeDetailsViewController: UIViewController {
+final class RecipeDetailsViewController: UIViewController, RecipeDetailsViewProtocol {
     private let storage = Storage.storage()
     private let recipeImageView = UIImageView()
     private let titleLabel = UILabel()
     private let stepsStackView = UIStackView()
-    private let recipeReference: DocumentReference
+    private var presenter: RecipeDetailsPresenterProtocol!
+
+    func inject(presenter: RecipeDetailsPresenterProtocol) {
+        self.presenter = presenter
+    }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         if previousTraitCollection?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
             view.layoutIfNeeded()
         }
-    }
-
-    init(recipeID: String) {
-        self.recipeReference = Firestore.firestore().collection("recipes").document(recipeID)
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 
     override func viewDidLoad() {
@@ -78,19 +73,7 @@ final class RecipeDetailsViewController: UIViewController {
         stepsTitleLabel.adjustsFontForContentSizeCategory = true
         stepsStackView.addArrangedSubview(stepsTitleLabel)
 
-        fetchRecipe()
-    }
-
-    func fetchRecipe() {
-        recipeReference.getDocument { [weak self] snapshot, error in
-            if let error = error {
-                self?.showError(error)
-            } else if let snapshot = snapshot {
-                self?.showRecipe(snapshot: snapshot)
-            } else {
-                fatalError()
-            }
-        }
+        presenter.refresh()
     }
 
     func showError(_ error: Error) {
@@ -102,30 +85,22 @@ final class RecipeDetailsViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    func showRecipe(snapshot: DocumentSnapshot) {
-        guard let recipe = snapshot.data() else { return }
-        title = recipe["title"] as? String
-        titleLabel.text = recipe["title"] as? String
+    func showRecipe(_ recipe: RecipeDetailsRecipe) {
+        title = recipe.title
+        titleLabel.text = recipe.title
 
         let placeholderImage = UIImage(systemName: "photo")
-        // レシピ写真を Cloud Storage から取得して表示する
-        if let path = recipe["imagePath"] as? String {
-            let ref = Storage.storage().reference(withPath: path)
-            recipeImageView.sd_setImage(with: ref, placeholderImage: placeholderImage)
-        } else {
-            recipeImageView.image = placeholderImage
-        }
+        let ref = Storage.storage().reference(withPath: recipe.imagePath)
+        recipeImageView.sd_setImage(with: ref, placeholderImage: placeholderImage)
 
-        if let steps = recipe["steps"] as? [String] {
-            steps.enumerated().forEach { index, step in
-                let label = UILabel()
-                label.text = "\(index + 1): \(step)"
-                label.font = UIFont.preferredFont(forTextStyle: .body)
-                label.textColor = .secondaryLabel
-                label.adjustsFontForContentSizeCategory = true
-                label.numberOfLines = 0
-                stepsStackView.addArrangedSubview(label)
-            }
+        recipe.steps.enumerated().forEach { index, step in
+            let label = UILabel()
+            label.text = "\(index + 1): \(step)"
+            label.font = UIFont.preferredFont(forTextStyle: .body)
+            label.textColor = .secondaryLabel
+            label.adjustsFontForContentSizeCategory = true
+            label.numberOfLines = 0
+            stepsStackView.addArrangedSubview(label)
         }
     }
 }
