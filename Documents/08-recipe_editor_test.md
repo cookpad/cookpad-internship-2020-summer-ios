@@ -155,5 +155,8 @@ class RecipeEditorInteractorTests: XCTestCase {
 <details>
 <summary>答えを見る</summary>
 
-このPRのDiffを参照してください。
+[こちらの Diff](https://github.com/cookpad/cookpad-internship-2020-summer-ios/compare/part3-test..part4) もしくは [part3-test完了時点のコード](https://github.com/cookpad/cookpad-internship-2020-summer-ios/tree/part4)を参照してください。  
+また、ヒントにも簡単な解説が書いてあるので、それも参照してください。
+
+
 </details>

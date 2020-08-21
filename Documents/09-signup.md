@@ -61,5 +61,8 @@ Auth.auth().createUser(withEmail: email, password: password) { authResult, error
 <details>
 <summary>答えを見る</summary>
 
-このPRのDiffを参考にしてください。  
+[こちらの Diff](https://github.com/cookpad/cookpad-internship-2020-summer-ios/compare/part4..part4-completed) もしくは [part4完了時点のコード](https://github.com/cookpad/cookpad-internship-2020-summer-ios/tree/part4-completed)を参照してください。  
+また、ヒントにも簡単な解説が書いてあるので、それも参照してください。
+
+
 </details>
