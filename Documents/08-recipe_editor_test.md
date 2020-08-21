@@ -120,7 +120,7 @@ class RecipeEditorInteractorTests: XCTestCase {
 <details>
 <summary>ヒント4</summary>
 
-レシピの作成が失敗したときのテストは、 createImageResult に失敗を渡すだけです。  
+画像の登録が失敗したときのテストは、 createImageResult に失敗を渡すだけです。  
 {} の中身を埋めてみましょう。
 
 ```swift
@@ -145,6 +145,8 @@ class RecipeEditorInteractorTests: XCTestCase {
         }
     }
 ```
+
+続いて 3, 4, 5 のテストケースも作成しましょう。
 
 </details>
 

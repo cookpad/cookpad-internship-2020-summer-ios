@@ -253,7 +253,7 @@ struct ImageDataStore: ImageDataStoreProtocol {
      }
 +
 +    func createRecipe(title: String, steps: [String], imagePath: String, completion: @escaping ((Result<Void, Error>) -> Void)) {
-+        let recipe = Recipe(title: title, imagePath: imagePath, steps: steps)
++        let recipe = FirestoreRecipe(title: title, imagePath: imagePath, steps: steps)
 +        _ = try! collection.addDocument(from: recipe) { error in
 +            if let error = error {
 +                completion(.failure(error))
@@ -360,7 +360,7 @@ class RecipeEditorInteractor: RecipeEditorInteractorProtocol {
     }
 
     func createRecipe(title: String?, steps: [String?], image: UIImage?, completion: @escaping ((Result<Void, RecipeEditorError>) -> Void)) {
-        let result = validate(title: title, steps: steps, imageData: image?.jpegData(compressionQuality: 0.1))
+        let result = Self.validate(title: title, steps: steps, imageData: image?.jpegData(compressionQuality: 0.1))
 
         let title: String
         let steps: [String]
@@ -407,7 +407,7 @@ class RecipeEditorInteractor: RecipeEditorInteractorProtocol {
         if steps.isEmpty, title.isEmpty {
             return .failure(.validationError)
         }
-        if Self.containsEmoji(text: title) || (steps.map { Self.containsEmoji(text: $0) }).contains(true) {
+        if containsEmoji(text: title) || (steps.map { Self.containsEmoji(text: $0) }).contains(true) {
             return .failure(.validationError)
         }
 
