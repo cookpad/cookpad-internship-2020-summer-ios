@@ -13,10 +13,6 @@ MiniCookpad アプリの開発を通し、クックパッドアプリのアー�
 
 Kibela をみつつ自己紹介
 
-## 資料
-
-この資料は https://github.com/cookpad/cookpad-internship-2020-summer-ios/Documents に公開されています。  
-
 ## Cookpad の iOS アプリ
 
 - 2009年リリース http://touchlab.jp/2009/11/cookpad-iphone/
