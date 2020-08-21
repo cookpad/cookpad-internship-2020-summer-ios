@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
 
-        let recipeListViewController = RecipeListViewController()
+        let recipeListViewController = RecipeListViewBuilder.build()
         let rootNavigationViewController = UINavigationController(rootViewController: recipeListViewController)
         window.rootViewController = rootNavigationViewController
     }

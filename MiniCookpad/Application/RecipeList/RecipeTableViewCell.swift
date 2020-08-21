@@ -42,17 +42,13 @@ final class RecipeTableViewCell: UITableViewCell {
         descriptionLabel.numberOfLines = 2
     }
 
-    func configure(recipe: QueryDocumentSnapshot) {
+    func configure(recipe: RecipeListRecipe) {
         let placeholderImage = UIImage(systemName: "photo")
         // レシピ写真を Cloud Storage から取得して表示する
-        if let path = recipe.data()["imagePath"] as? String {
-            let ref = Storage.storage().reference(withPath: path)
-            thumbnailImageView.sd_setImage(with: ref, placeholderImage: placeholderImage)
-        } else {
-            thumbnailImageView.image = placeholderImage
-        }
-        recipeTitleLabel.text = recipe.data()["title"] as? String
-        descriptionLabel.text = (recipe.data()["steps"] as? [String])?.joined(separator: ", ")
+        let ref = Storage.storage().reference(withPath: recipe.imagePath)
+        thumbnailImageView.sd_setImage(with: ref, placeholderImage: placeholderImage)
+        recipeTitleLabel.text = recipe.title
+        descriptionLabel.text = recipe.steps.joined(separator: ", ")
     }
 
     required init?(coder: NSCoder) {

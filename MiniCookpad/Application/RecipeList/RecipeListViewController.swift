@@ -3,12 +3,17 @@ import Firebase
 import Foundation
 import FirebaseFirestoreSwift
 
-class RecipeListViewController: UIViewController {
-    private var recipes: [QueryDocumentSnapshot] = []
+class RecipeListViewController: UIViewController, RecipeListViewProtocol {
+    private var recipes: [RecipeListRecipe] = []
     private let tableView = UITableView()
     private let refreshControl = UIRefreshControl()
     private let recipeCollection = Firestore.firestore().collection("recipes")
-    
+    private var presenter: RecipeListPresenterProtocol!
+
+    func inject(presenter: RecipeListPresenterProtocol) {
+        self.presenter = presenter
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +31,7 @@ class RecipeListViewController: UIViewController {
         refresh()
     }
 
-    func showRecipes(_ recipes: [QueryDocumentSnapshot]) {
+    func showRecipes(_ recipes: [RecipeListRecipe]) {
         self.recipes = recipes
         refreshControl.endRefreshing()
         tableView.reloadData()
@@ -43,14 +48,7 @@ class RecipeListViewController: UIViewController {
     @objc private func refresh() {
         refreshControl.beginRefreshing()
         
-        recipeCollection.order(by: "createdAt", descending: true).getDocuments() { [weak self] querySnapshot, error in
-            if let error = error {
-                self?.showError(error)
-            } else {
-                let recipes = querySnapshot!.documents
-                self?.showRecipes(recipes)
-            }
-        }
+        presenter.refresh()
     }
 }
 
@@ -61,9 +59,8 @@ extension RecipeListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let recipeID = recipes[indexPath.row].documentID
-        let vc = RecipeDetailsViewController(recipeID: recipeID)
-        navigationController?.pushViewController(vc, animated: true)
+        let recipeID = recipes[indexPath.row].id
+        presenter.openRecipeDetails(recipeID: recipeID)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
