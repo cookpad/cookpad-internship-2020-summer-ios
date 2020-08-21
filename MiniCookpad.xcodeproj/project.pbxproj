@@ -19,6 +19,21 @@
 		322BED2424CE7ED700F6A201 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BED2324CE7ED700F6A201 /* DummyData.swift */; };
 		322BED3B24CFC3B700F6A201 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BED3A24CFC3B700F6A201 /* RecipeDetailsViewController.swift */; };
 		322BED4924CFFAC700F6A201 /* RecipeEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322BED4824CFFAC700F6A201 /* RecipeEditorViewController.swift */; };
+		324435AC24E23DDD00BD68BC /* RecipeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435AB24E23DDD00BD68BC /* RecipeDataStore.swift */; };
+		324435AE24E23DF200BD68BC /* RecipeListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435AD24E23DF200BD68BC /* RecipeListPresenter.swift */; };
+		324435B024E23DFE00BD68BC /* RecipeListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435AF24E23DFE00BD68BC /* RecipeListContract.swift */; };
+		324435B224E23E0A00BD68BC /* RecipeListViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435B124E23E0A00BD68BC /* RecipeListViewBuilder.swift */; };
+		324435B424E23E1700BD68BC /* RecipeListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435B324E23E1700BD68BC /* RecipeListInteractor.swift */; };
+		324435B624E23E2300BD68BC /* RecipeListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435B524E23E2200BD68BC /* RecipeListWireframe.swift */; };
+		324435B824E23E2D00BD68BC /* RecipeListRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435B724E23E2D00BD68BC /* RecipeListRecipe.swift */; };
+		324435BA24E240F400BD68BC /* RecipeDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435B924E240F400BD68BC /* RecipeDetailsPresenter.swift */; };
+		324435BC24E2410500BD68BC /* RecipeDetailsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435BB24E2410500BD68BC /* RecipeDetailsContract.swift */; };
+		324435BE24E2410F00BD68BC /* RecipeDetailsViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435BD24E2410F00BD68BC /* RecipeDetailsViewBuilder.swift */; };
+		324435C024E2412300BD68BC /* RecipeDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435BF24E2412300BD68BC /* RecipeDetailsInteractor.swift */; };
+		324435C224E2412C00BD68BC /* RecipeDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435C124E2412C00BD68BC /* RecipeDetailsWireframe.swift */; };
+		324435C424E2413900BD68BC /* RecipeDetailsRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435C324E2413900BD68BC /* RecipeDetailsRecipe.swift */; };
+		324435F024E4D52600BD68BC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435EF24E4D52600BD68BC /* SignUpViewController.swift */; };
+		324435F924EE502E00BD68BC /* FirestoreRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324435F824EE502E00BD68BC /* FirestoreRecipe.swift */; };
 		A665071A5C03DD076A859C89 /* Pods_MiniCookpadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D6198D26C4CA301B60B869 /* Pods_MiniCookpadTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +63,21 @@
 		322BED2324CE7ED700F6A201 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		322BED3A24CFC3B700F6A201 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		322BED4824CFFAC700F6A201 /* RecipeEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorViewController.swift; sourceTree = "<group>"; };
+		324435AB24E23DDD00BD68BC /* RecipeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataStore.swift; sourceTree = "<group>"; };
+		324435AD24E23DF200BD68BC /* RecipeListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListPresenter.swift; sourceTree = "<group>"; };
+		324435AF24E23DFE00BD68BC /* RecipeListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListContract.swift; sourceTree = "<group>"; };
+		324435B124E23E0A00BD68BC /* RecipeListViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewBuilder.swift; sourceTree = "<group>"; };
+		324435B324E23E1700BD68BC /* RecipeListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListInteractor.swift; sourceTree = "<group>"; };
+		324435B524E23E2200BD68BC /* RecipeListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListWireframe.swift; sourceTree = "<group>"; };
+		324435B724E23E2D00BD68BC /* RecipeListRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListRecipe.swift; sourceTree = "<group>"; };
+		324435B924E240F400BD68BC /* RecipeDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsPresenter.swift; sourceTree = "<group>"; };
+		324435BB24E2410500BD68BC /* RecipeDetailsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsContract.swift; sourceTree = "<group>"; };
+		324435BD24E2410F00BD68BC /* RecipeDetailsViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewBuilder.swift; sourceTree = "<group>"; };
+		324435BF24E2412300BD68BC /* RecipeDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsInteractor.swift; sourceTree = "<group>"; };
+		324435C124E2412C00BD68BC /* RecipeDetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsWireframe.swift; sourceTree = "<group>"; };
+		324435C324E2413900BD68BC /* RecipeDetailsRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsRecipe.swift; sourceTree = "<group>"; };
+		324435EF24E4D52600BD68BC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		324435F824EE502E00BD68BC /* FirestoreRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRecipe.swift; sourceTree = "<group>"; };
 		55B51621DCFBCDD7A5895BA2 /* Pods_MiniCookpad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniCookpad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC4AA5B581FAD60590BC0C1 /* Pods-MiniCookpadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MiniCookpadTests.debug.xcconfig"; path = "Target Support Files/Pods-MiniCookpadTests/Pods-MiniCookpadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B8D6198D26C4CA301B60B869 /* Pods_MiniCookpadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MiniCookpadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,9 +137,6 @@
 				322BED0024CE712600F6A201 /* Assets.xcassets */,
 				322BED0224CE712600F6A201 /* LaunchScreen.storyboard */,
 				322BED0524CE712600F6A201 /* Info.plist */,
-				322BED1D24CE758200F6A201 /* RecipeList */,
-				322BED3924CFC3A300F6A201 /* RecipeDetails */,
-				322BED4724CFFAB500F6A201 /* RecipeEditor */,
 				322BED2324CE7ED700F6A201 /* DummyData.swift */,
 			);
 			path = MiniCookpad;
@@ -127,6 +154,10 @@
 		322BED1924CE713C00F6A201 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				324435EE24E4D51700BD68BC /* SignUp */,
+				322BED1D24CE758200F6A201 /* RecipeList */,
+				322BED3924CFC3A300F6A201 /* RecipeDetails */,
+				322BED4724CFFAB500F6A201 /* RecipeEditor */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -136,6 +167,12 @@
 			children = (
 				322BECFB24CE712100F6A201 /* RecipeListViewController.swift */,
 				322BED1E24CE788400F6A201 /* RecipeTableViewCell.swift */,
+				324435AD24E23DF200BD68BC /* RecipeListPresenter.swift */,
+				324435AF24E23DFE00BD68BC /* RecipeListContract.swift */,
+				324435B124E23E0A00BD68BC /* RecipeListViewBuilder.swift */,
+				324435B324E23E1700BD68BC /* RecipeListInteractor.swift */,
+				324435B524E23E2200BD68BC /* RecipeListWireframe.swift */,
+				324435B724E23E2D00BD68BC /* RecipeListRecipe.swift */,
 			);
 			path = RecipeList;
 			sourceTree = "<group>";
@@ -144,6 +181,12 @@
 			isa = PBXGroup;
 			children = (
 				322BED3A24CFC3B700F6A201 /* RecipeDetailsViewController.swift */,
+				324435B924E240F400BD68BC /* RecipeDetailsPresenter.swift */,
+				324435BB24E2410500BD68BC /* RecipeDetailsContract.swift */,
+				324435BD24E2410F00BD68BC /* RecipeDetailsViewBuilder.swift */,
+				324435BF24E2412300BD68BC /* RecipeDetailsInteractor.swift */,
+				324435C124E2412C00BD68BC /* RecipeDetailsWireframe.swift */,
+				324435C324E2413900BD68BC /* RecipeDetailsRecipe.swift */,
 			);
 			path = RecipeDetails;
 			sourceTree = "<group>";
@@ -156,10 +199,26 @@
 			path = RecipeEditor;
 			sourceTree = "<group>";
 		};
+		324435EE24E4D51700BD68BC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				324435EF24E4D52600BD68BC /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		324435FA24EE503100BD68BC /* RecipeDataStore */ = {
+			isa = PBXGroup;
+			children = (
+				324435AB24E23DDD00BD68BC /* RecipeDataStore.swift */,
+				324435F824EE502E00BD68BC /* FirestoreRecipe.swift */,
+			);
+			path = RecipeDataStore;
+			sourceTree = "<group>";
+		};
 		32C84BD824D3F2D700E684CF /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				32C84BDA24D3F2E300E684CF /* Entity */,
 				32C84BD924D3F2DC00E684CF /* DataStore */,
 			);
 			path = Data;
@@ -168,15 +227,9 @@
 		32C84BD924D3F2DC00E684CF /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				324435FA24EE503100BD68BC /* RecipeDataStore */,
 			);
 			path = DataStore;
-			sourceTree = "<group>";
-		};
-		32C84BDA24D3F2E300E684CF /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		36E7E6B96C2A4DB8235EDED1 /* Pods */ = {
@@ -367,13 +420,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				324435F024E4D52600BD68BC /* SignUpViewController.swift in Sources */,
 				322BECFC24CE712100F6A201 /* RecipeListViewController.swift in Sources */,
 				322BED3B24CFC3B700F6A201 /* RecipeDetailsViewController.swift in Sources */,
+				324435B424E23E1700BD68BC /* RecipeListInteractor.swift in Sources */,
 				322BED1F24CE788400F6A201 /* RecipeTableViewCell.swift in Sources */,
+				324435B624E23E2300BD68BC /* RecipeListWireframe.swift in Sources */,
+				324435AC24E23DDD00BD68BC /* RecipeDataStore.swift in Sources */,
+				324435B224E23E0A00BD68BC /* RecipeListViewBuilder.swift in Sources */,
+				324435B024E23DFE00BD68BC /* RecipeListContract.swift in Sources */,
 				322BECF824CE712100F6A201 /* AppDelegate.swift in Sources */,
+				324435B824E23E2D00BD68BC /* RecipeListRecipe.swift in Sources */,
+				324435AE24E23DF200BD68BC /* RecipeListPresenter.swift in Sources */,
 				322BECFA24CE712100F6A201 /* SceneDelegate.swift in Sources */,
+				324435BC24E2410500BD68BC /* RecipeDetailsContract.swift in Sources */,
+				324435BA24E240F400BD68BC /* RecipeDetailsPresenter.swift in Sources */,
+				324435C024E2412300BD68BC /* RecipeDetailsInteractor.swift in Sources */,
+				324435BE24E2410F00BD68BC /* RecipeDetailsViewBuilder.swift in Sources */,
 				322BED2424CE7ED700F6A201 /* DummyData.swift in Sources */,
 				322BED4924CFFAC700F6A201 /* RecipeEditorViewController.swift in Sources */,
+				324435C224E2412C00BD68BC /* RecipeDetailsWireframe.swift in Sources */,
+				324435C424E2413900BD68BC /* RecipeDetailsRecipe.swift in Sources */,
+				324435F924EE502E00BD68BC /* FirestoreRecipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

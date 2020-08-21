@@ -47,26 +47,29 @@ class RecipeEditorViewController: UIViewController {
         recipeOverlayButton.trailingAnchor.constraint(equalTo: recipeImageView.trailingAnchor).isActive = true
         recipeOverlayButton.bottomAnchor.constraint(equalTo: recipeImageView.bottomAnchor).isActive = true
         recipeOverlayButton.addTarget(self, action: #selector(didTapRecipeOverlay), for: .touchUpInside)
+        recipeOverlayButton.setBackgroundImage(#imageLiteral(resourceName: "background"), for: .highlighted)
 
         scrollView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: recipeImageView.bottomAnchor).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: recipeImageView.bottomAnchor, constant: 16).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16).isActive = true
         titleLabel.text = "レシピのタイトル"
+        titleLabel.font = UIFont.systemFont(ofSize: 30, weight: .bold)
 
         scrollView.addSubview(titleFieldView)
         titleFieldView.translatesAutoresizingMaskIntoConstraints = false
-        titleFieldView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-        titleFieldView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
-        titleFieldView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+        titleFieldView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16).isActive = true
+        titleFieldView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 6).isActive = true
+        titleFieldView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16).isActive = true
         titleFieldView.borderStyle = .roundedRect
+        titleFieldView.placeholder = "とりの唐揚げ"
 
         scrollView.addSubview(stepsView)
         stepsView.translatesAutoresizingMaskIntoConstraints = false
-        stepsView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-        stepsView.topAnchor.constraint(equalTo: titleFieldView.bottomAnchor).isActive = true
-        stepsView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+        stepsView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16).isActive = true
+        stepsView.topAnchor.constraint(equalTo: titleFieldView.bottomAnchor, constant: 16).isActive = true
+        stepsView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16).isActive = true
 
         let bottomSpace = UIView()
         scrollView.addSubview(bottomSpace)
@@ -81,7 +84,7 @@ class RecipeEditorViewController: UIViewController {
     @objc private func tapPost() {
 //        let title = titleFieldView.text
 //        let steps = stepsView.getSteps()
-//        let image = postImage?.jpegData(compressionQuality: 0.1)
+//        let image = postImage
         // TODO: レシピ作成
     }
 
@@ -108,7 +111,7 @@ class RecipeEditorViewController: UIViewController {
 
     // レシピの作成が完了した時に呼ぶ
     func showComplete() {
-        let alertController = UIAlertController(title: "投稿完了", message: "レシピ投稿か完了しました。", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "投稿完了", message: "レシピ投稿が完了しました。", preferredStyle: .alert)
         let closeAction = UIAlertAction(title: "閉じる", style: .default) { [weak self] _ in
             self?.close()
         }
@@ -163,6 +166,7 @@ extension RecipeEditorViewController: UIImagePickerControllerDelegate, UINavigat
         guard let image = info[.originalImage] as? UIImage else {
             return
         }
+        recipeImageView.contentMode = .scaleAspectFill
         recipeImageView.image = image
         postImage = image
     }
