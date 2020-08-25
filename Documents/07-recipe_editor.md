@@ -107,10 +107,13 @@ RecipeList 画面を以下のように修正し、実行してください。
 
 ```swift
 // text に emoji があったら true になる
-private static func containsEmoji(text: String) -> Bool {
-    let emojis = text.unicodeScalars.filter { $0.properties.isEmoji }
-    return !emojis.isEmpty
-}
+    private static func containsEmoji(text: String) -> Bool {
+        var surrogatePairCharacters: [Character] {
+            // 順序を保持しつつ、重複要素を取り除くためreduceを使用
+            return text.filter { String($0).utf16.count > 1 }.reduce([]) { $0.contains($1) ? $0 : $0 + [$1] }
+        }
+        return !surrogatePairCharacters.isEmpty
+    }
 ```
 
 #### 画像の投稿
